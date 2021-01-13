@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheet1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="frontend.js"></script>
+</head>
+
+<body style="font-family:courier,arial,helvetica;">
+	<div class="grid-container">
+		<div class="item1">
+			<h1 id="title" class="title">Peerstor</h1>
+		</div>
+		<div class="item2">
+			<h2 id="nodeName"></h2>
+		</div>
+		<div class="item3">
+				<h3 id="chat">Public Chat</h3>
+				<div id="chat_table">
+					<div id="public">
+						<table id="public_messages" style="font-weight:normal;visibility: visible">
+							<tr class="space"> </tr>
+						</table>
+					</div>
+					<div id="private_x">
+						<table id="private_messages_x" style="font-weight:normal; visibility: visible;">
+							<tr class="messages"></tr>
+						</table>
+					</div>
+				</div>
+				<input type="text" id="sendMessage" placeholder="Type your public message here" class="form-control" />
+				<button onclick="sendMessage()" class="btn btn-default" id="addMessage">Send</Button>
+				<div>
+					<input type="checkbox" id="anonymityCheck" name="anonymityCheck"checked>
+					<label for="anonymous">anonymous</label>
+				</div>
+		</div>
+		<div class="item4">
+			<h3 id="knownPeers">Known Peers</h3>
+			<ul id="peers" style="width:100%"></ul>
+			<input type="text" id="sendNode" placeholder="Add a new peer here (IP:PORT)" class="form-control" />
+			<button onclick="addNode()" class="btn btn-default" id="addNode">Add</Button>
+		</div>
+		<div class="item5">
+			<h3 id="knownIds">Known Identifiers</h3>
+			<ul id="ids" style="width:100%"></ul>
+		</div>
+		<div class="item6">
+			<h3 id="knownCIDs">Circuit IDs</h3>
+			<ul id="cIDs" style="width:100%"></ul>
+		</div>
+		<div class="item7">
+			<h3>Request Onion Address</h3>
+			<input type="text" id="onionAddrRequest" placeholder="Please enter the onion address to query"
+				class="form-control" />
+			<button onclick="addrRequest()" class="btn btn-default" id="addrRequest">Request</Button>
+		</div>
+		<div class="item8">
+			<h3>Start Hidden Service</h3>
+			<input type="text" id="startHS" placeholder="Enter the port on which to start the HS"
+				class="form-control" />
+			<button onclick="startHS()" class="btn btn-default" id="addHSStart">HS Start</Button>
+		</div>
+	</div>
+
+</body>
+
+</html>
