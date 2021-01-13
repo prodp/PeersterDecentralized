@@ -4,6 +4,5 @@ Implementation of a decentralized chat based on a gossip protocol to share messa
 
 For more information see [report](https://github.com/prodp/PeersterDecentralized/blob/main/Decentralized_Project.pdf).
 
-
 ## Contributors
 [Diana Petrescu], [Ricardo Ferreira Ribeiro]
